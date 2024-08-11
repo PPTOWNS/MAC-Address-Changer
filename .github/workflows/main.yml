@@ -1,7 +1,5 @@
 name: Star
-
 on:
-
   push:
     branches:
       - main
@@ -21,7 +19,7 @@ jobs:
       - name: Modify last update
         run: |
           d='DATE '`date '+%Y-%m-%d %H:%M:%S'`
-          echo $d > LOG
+          echo $d > MAC
           
       - name: Commit changes
         run: | 
@@ -29,16 +27,16 @@ jobs:
           git config --local user.name "${{ github.repository_owner }}"
           git add -A
           
-          arr[0]="Update"
-          arr[1]="Update"
-          arr[2]="Update"
-          arr[3]="Update"
-          arr[4]="Update"
-          arr[5]="Update"
-          arr[6]="Update"
-          arr[7]="Update"
-          arr[8]="Update"
-          arr[9]="Update"
+          arr[0]="MAC"
+          arr[1]="MAC"
+          arr[2]="MAC"
+          arr[3]="MAC"
+          arr[4]="MAC"
+          arr[5]="MAC"
+          arr[6]="MAC"
+          arr[7]="MAC"
+          arr[8]="MAC"
+          arr[9]="MAC"
           
           rand=$[$RANDOM % ${#arr[@]}]
           
